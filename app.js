@@ -34,8 +34,9 @@
     }
 
 
+    const listHeight = scrollableDiv.offsetHeight
     scrollableDiv.addEventListener('scroll', (_) => {
-        let listEnd = scrollableDiv.scrollHeight - 500 // The listEnd is it's scrollable height plus it's component height
+        let listEnd = scrollableDiv.scrollHeight - listHeight // The listEnd is it's scrollable height plus it's component height
         let scrollPosition = scrollableDiv.scrollTop // The current position of scroll
 
         console.log(`scrollTop`, { current: scrollPosition, max: listEnd }); // Debug purposes
